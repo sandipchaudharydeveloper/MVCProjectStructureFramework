@@ -52,3 +52,31 @@
 if ($("#frmRegister").valid()) {
     //form Submit Code
 }
+
+
+function onlyChar() {
+
+    var ch = String.fromCharCode(event.keyCode);
+    var filter = /[a-zA-Z0-9 ]/;
+    if (!filter.test(ch)) {
+        event.returnValue = false;
+    }
+}
+
+function onlyCharnum() {
+
+    var ch = String.fromCharCode(event.keyCode);
+    var filter = /[a-zA-Z0-9]/;
+    if (!filter.test(ch)) {
+        event.returnValue = false;
+    }
+}
+
+function onlyNum() {
+    var no = String.fromCharCode(event.keyCode);
+    var filter = /[0-9]/;
+    if (!filter.test(no)) {
+
+        event.returnValue = false;
+    }
+}
